@@ -21,6 +21,6 @@ void main(void) {
     Comp1_init();
     
     while (1) {
-		//Sleep();
+		Sleep();
     }
 }   
