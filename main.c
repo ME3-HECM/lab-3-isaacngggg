@@ -26,7 +26,6 @@ void main(void) {
     
     
     while (1) {
-		LEDarray_disp_bin(TMR0H);
-        __delay_ms(500);
+		LEDarray_disp_bin(TMR0L);       // we read from the low register
     }
 }   
