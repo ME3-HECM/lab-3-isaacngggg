@@ -26,6 +26,6 @@ void main(void) {
     
     
     while (1) {
-		LEDarray_disp_bin(TMR0L);       // we read from the low register
+		LEDarray_disp_bin(get16bitTMR0val()>>8);       // display the 8 most significant bits
     }
 }   

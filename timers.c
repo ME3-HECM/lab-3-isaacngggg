@@ -9,7 +9,7 @@ void Timer0_init(void)
     T0CON1bits.T0CS=0b010; // Fosc/4
     T0CON1bits.T0ASYNC=0; // see datasheet errata - needed to ensure correct operation when Fosc/4 used as clock source
     T0CON1bits.T0CKPS=0b1111; // 1:32768 Prescaler Rate select bit, p359
-    T0CON0bits.T016BIT=0;	//8bit mode	
+    T0CON0bits.T016BIT=1;	//8bit mode	
 	
     // it's a good idea to initialise the timer registers so we know we are at 0
     TMR0H=0b11111111;            //write High reg first, update happens when low reg is written to
@@ -24,5 +24,5 @@ void Timer0_init(void)
 unsigned int get16bitTMR0val(void)
 {
 	//add your code to get the full 16 bit timer value here
-    
+    return (TMR0H <<8)|TMR0L; //combining the high register at(TMROH)(shifting it up) with the low register (TMR0L)
 }
