@@ -4,6 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>interrupts.h</itemPath>
+      <itemPath>comparator.h</itemPath>
+      <itemPath>LEDarray.h</itemPath>
+      <itemPath>timers.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -12,11 +16,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>comparator.h</itemPath>
       <itemPath>interrupts.c</itemPath>
-      <itemPath>interrupts.h</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>comparator.c</itemPath>
+      <itemPath>timers.c</itemPath>
+      <itemPath>LEDarray.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -24,6 +28,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../lab-2-isaacngggg.X</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -674,6 +681,8 @@
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="/Users/isaacng/Documents/GitECM/lab-3-isaacngggg.X/debug/default/lab-3-isaacngggg_ptg"/>
         <property key="programmerToGoImageName" value="lab-3-isaacngggg_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -1201,6 +1210,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="/Users/isaacng/Documents/GitECM/lab-3-isaacngggg.X/debug/default/lab-3-isaacngggg_ptg"/>
         <property key="programmerToGoImageName" value="lab-3-isaacngggg_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

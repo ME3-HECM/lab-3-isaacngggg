@@ -8,6 +8,8 @@
 #include <xc.h>
 #include "interrupts.h"
 #include "comparator.h"
+#include "LEDarray.h"
+#include "timers.h"
 
 #define _XTAL_FREQ 64000000 //note intrinsic _delay function is 62.5ns at 64,000,000Hz  
 
@@ -19,8 +21,12 @@ void main(void) {
     Interrupts_init();
     DAC_init();
     Comp1_init();
+    Timer0_init();
+    LEDarray_init();
+    
     
     while (1) {
-		Sleep();
+		LEDarray_disp_bin(TMR0H);
+        __delay_ms(500);
     }
 }   
